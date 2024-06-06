@@ -1,0 +1,35 @@
+    Command         Variations          Description
+
+1.  MOV             MOV B,C             Move contents of Register C to Register B
+                    MOV M,A             Move contents accumulator to Memory address defined by H and L register pair
+                    MOV D,M             Move contents of Memory address defined by H and L register pair to D register
+
+2.  MVI             MVI A,36            Move hexadecimal value 36 to accumulator 
+                    MVI M,36            Move hexadecimal value 36 to memory
+
+3.  LXI             LXI B,2040          Move hexadecimal address 2040 to BC register pair
+                    LXI D,2040          Move hexadecimal address 2040 to DE register pair
+                    LXI H,2040          Move hexadecimal address 2040 to HL register pair
+
+4.  LDA             LDA 5000            Load contents at hexadecimal memory location 5000 to accumulator
+
+5.  STA             STA 5001            Store contents of accumulator at the given hexadecimal memory address
+
+6.  LHLD            LHLD 5001           Load H register with contents of memory location 5001 and L register with contents
+                                        of memory location 5002
+
+7.  SHLD            SHLD 5003           Store contents of H register to memory location 5003 and contents of L register 
+                                        to memory location 5004
+
+8.  LDAX            LDAX B              Load contents of memory location pointed by BC register pair in accumulator
+                    LDAX D              Load contents of memory location pointed by DE register pair in accumulator
+
+9.  STAX            STAX B              Store contents of accumulator in memory location pointed by BC register pair
+                    STAX D              Store contents of accumulator in memory location pointed by DE register pair
+
+10. XCHG            XCHG                Exchange the contents of HL registers with DE registers
+
+11. ADD             ADD R               Add the value of specified register to accumulator
+                    ADD M               Add value of memory address defined by H and L register to accumulator
+
+12. ADI             ADI 20              Add immediate value (in hexadecimal) to accumulator

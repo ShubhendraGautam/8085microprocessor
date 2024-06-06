@@ -1,0 +1,84 @@
+1. Data Transfer Operations
+        These instructions move data between registers, between memory and registers, or between I/O ports and registers.
+
+
+        (Instructions)                                                    (Example)             (Status)                     
+
+        MOV: Move data between registers or between register and memory.  (MOV B,C)             [Done]        
+        MVI: Move immediate data to a register or memory.                 (MVI C,0FF)           [Done]
+        LXI: Load immediate data into a register pair.                    (LXI H,2040)          [Done]
+        LDA: Load accumulator from memory.                                (LDA 5000)            [Done]
+        STA: Store accumulator to memory.                                 (STA 5001)            [Done]
+        LHLD: Load H and L registers directly from memory.                (LHLD 5000)           [Done]                   
+        SHLD: Store H and L registers directly to memory.                 (SHLD 5002)           [Done]
+        LDAX: Load accumulator indirectly from memory.                    (LDAX B)              [Done]
+        STAX: Store accumulator indirectly to memory.                     (STAX B)              [Done]
+        XCHG: Exchange the contents of the H and L registers with the D and E registers.[XCHG]  [DONE]
+
+2. Arithmetic Operations
+        These instructions perform arithmetic operations like addition, subtraction, increment, and decrement.
+
+        ADD: Add register or memory to accumulator.                       (ADD B)               [Done]                                    
+        ADI: Add immediate data to accumulator.                           (ADI 16)              [Done]
+        ADC: Add register or memory to accumulator with carry.            (ADC B)               [Done]
+        ACI: Add immediate data to accumulator with carry.                (ACI 16)              [Done]
+        SUB: Subtract register or memory from accumulator.
+        SUI: Subtract immediate data from accumulator.
+        SBB: Subtract register or memory from accumulator with borrow.
+        SBI: Subtract immediate data from accumulator with borrow.
+        INR: Increment register or memory.
+        DCR: Decrement register or memory.
+        INX: Increment register pair.
+        DCX: Decrement register pair.
+        DAD: Add register pair to H and L registers.
+
+
+3. Logical Operations
+        These instructions perform logical operations like AND, OR, XOR, and comparisons.
+
+        ANA: Logical AND register or memory with accumulator.
+        ANI: Logical AND immediate data with accumulator.
+        XRA: Logical XOR register or memory with accumulator.
+        XRI: Logical XOR immediate data with accumulator.
+        ORA: Logical OR register or memory with accumulator.
+        ORI: Logical OR immediate data with accumulator.
+        CMP: Compare register or memory with accumulator.
+        CPI: Compare immediate data with accumulator.
+        CMA: Complement accumulator.
+        CMC: Complement carry.
+        STC: Set carry.
+
+
+4. Branching Operations
+        These instructions alter the normal sequential flow of execution.
+
+        JMP: Unconditional jump to specified address.
+        JC: Jump to specified address if carry flag is set.
+        JNC: Jump to specified address if carry flag is not set.
+        JZ: Jump to specified address if zero flag is set.
+        JNZ: Jump to specified address if zero flag is not set.
+        JP: Jump to specified address if sign flag is not set.
+        JM: Jump to specified address if sign flag is set.
+        JPE: Jump to specified address if parity flag is even.
+        JPO: Jump to specified address if parity flag is odd.
+        CALL: Call subroutine at specified address.
+        RET: Return from subroutine.
+        RC: Return from subroutine if carry flag is set.
+        RNC: Return from subroutine if carry flag is not set.
+        RZ: Return from subroutine if zero flag is set.
+        RNZ: Return from subroutine if zero flag is not set.
+        RP: Return from subroutine if sign flag is not set.
+        RM: Return from subroutine if sign flag is set.
+        RPE: Return from subroutine if parity flag is even.
+        RPO: Return from subroutine if parity flag is odd.
+
+
+5. Control Operations
+        These instructions control the operation of the processor.
+
+        NOP: No operation.
+        HLT: Halt the processor.
+        DI: Disable interrupts.
+        EI: Enable interrupts.
+        RIM: Read interrupt mask.
+        SIM: Set interrupt mask.

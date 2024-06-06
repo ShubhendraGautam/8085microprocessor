@@ -1,0 +1,13 @@
+There will be no space in the arguements. They will be seperated by ","
+        Example:    MOV A,B     (Correct)
+                    MOV A, B    (Incorrect)
+
+Memory Address will always be given in Hexadecimal format. Also no need for "0x" prfix.
+        Example:    LXI H,2040      (Correct)
+                    LXI H,0x2040    (Incorrect)
+
+Immediate Values should be given in Hexadecimal. Don't use H at the end.
+        Example:    MVI B,2000      (Correct)
+                    MVI B,2000H     (Incorrect)
+
+Don't include any comments. This feature is not yet implemented.
